@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 export type PartTypes = {
-    funny?: sting
+    funny?: string
 }
 
 export const Initial = ({ funny }:PartTypes) => {
