@@ -1,8 +1,9 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Initial } from  '../../components/ui/Initial'
 import { Button } from  '../../components/ui/button'
 
-export default function Home() {
+export default function Page() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Initial funny={"nerb"} />
@@ -16,7 +17,11 @@ export default function Home() {
           priority
         />
       </div>
-      <Button>Should probably eat something</Button>
+      <Button>
+        <Link href="/info">
+          Should probably eat something
+        </Link>
+        </Button>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
