@@ -5,7 +5,7 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "I truly hate Docker",
+  title: "NxtDkr",
   description: "What a pain in the hoop",
 };
 
