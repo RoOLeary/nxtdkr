@@ -18,7 +18,7 @@ export default function Page() {
           priority
         />
       </div>
-      <Button>
+      <Button variant="destructive">
         <Link href="/info">
           Should probably eat something
         </Link>
