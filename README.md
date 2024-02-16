@@ -16,6 +16,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## To Do: 
 
+- Add shortcut directory/index/glossary
 - Add Next Auth
 - Demo forms/middleware
 - Advanced tracking (GTM plus Posthog most likely)
