@@ -6,6 +6,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - Docker Desktop
 - Node
 
+## Includes: 
+
+- Typescript
+- TailwindCSS
+- Eslint/Prettier standards
+- Vscode standards - auto lint files on save
+- Commitlint (standardise commit messages)
+
+## To Do: 
+
+- Add Next Auth
+- Demo forms/middleware
+- Advanced tracking (GTM plus Posthog most likely)
+
+
 ## Installation
 
 First, clone the repo. cd to the project source in your terminal and run this:
