@@ -28,8 +28,8 @@ export default function Page() {
         </Button>
       </div>
       <br />
-      <br />
       <Badge className="p-4 bg-green-600">Nice litte badge</Badge>
+      <br />
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
           href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
