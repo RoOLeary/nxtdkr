@@ -1,5 +1,11 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+
+## Requirements:
+
+- Docker Desktop
+- Node
+
 ## Installation
 
 First, clone the repo. cd to the project source in your terminal and run this:
@@ -25,3 +31,5 @@ Then:
 ```
 docker-compose up -d
 ```
+
+The project will build and render on http://localhost:3000
