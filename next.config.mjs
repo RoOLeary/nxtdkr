@@ -15,6 +15,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'craft-ezhk.frb.io',
       },
+      {
+        protocol: 'https',
+        hostname: 'ronan-oleary.com',
+      },
     ],
   },
   poweredByHeader: true,
