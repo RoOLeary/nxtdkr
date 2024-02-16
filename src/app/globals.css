@@ -1,12 +1,15 @@
 @tailwind base;
 @tailwind components;
+
+.phloot{
+  margin: 2em auto;
+}
+
 @tailwind utilities;
- 
+  
 @layer base {
 
-  .phloot{
-    margin: 2em auto;
-  }
+ 
 
   :root {
     --background: 0 0% 100%;
