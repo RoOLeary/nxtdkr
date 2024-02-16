@@ -23,6 +23,30 @@ const nextConfig = {
   },
   poweredByHeader: true,
   reactStrictMode: false,
+  async redirects() {
+    return [
+      {
+        source: '/admin',
+        destination: '/',
+        permanent: true,
+      },
+      {
+        source: '/about-us',
+        destination: '/about',
+        permanent: true,
+      },
+      {
+        source: '/blog/tech/:slug*',
+        destination: '/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/strategy/:slug*',
+        destination: '/blog',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
