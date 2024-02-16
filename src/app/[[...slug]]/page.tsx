@@ -19,9 +19,14 @@ export default function Page() {
           priority
         />
       </div>
-      <Button variant="outline" className="hidden md:block">
-        <Link href="/info">Should probably eat something</Link>
-      </Button>
+      <div className="flex gap-4">
+        <Button variant="outline" className="hidden md:block">
+          <Link href="/info">Should probably get some lunch.</Link>
+        </Button>
+        <Button variant="destructive" className="hidden md:block">
+          <Link href="/about">Yeah about that</Link>
+        </Button>
+      </div>
       <br />
       <Badge>Badge it up!</Badge>
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
