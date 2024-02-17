@@ -8,8 +8,51 @@ import { Nav } from '../components/ui/nav';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'NxtDkr',
-  description: 'What a pain in the hoop',
+  metadataBase: new URL('https://nxtdkr.vercel.app'),
+  title: 'NXTDKR | Base Template',
+  description: 'NXTDKR | Base Template',
+  keywords: 'Base, Keywords, To Follow',
+  // @ts-ignore
+  images: [
+    {
+      url: 'https://busylittlepixels.com/assets/images/heart.webp',
+      width: 800,
+      height: 600,
+    },
+    {
+      url: 'https://busylittlepixels.com/assets/images/heart.webp',
+      width: 1800,
+      height: 1600,
+      alt: 'NXTDKR | Base Template',
+    },
+  ],
+
+  openGraph: {
+    type: 'website',
+    url: 'https://nxtdkr.vercel.app',
+    title: `NXTDKR | Base Template`,
+    description: `NXTDKR | Base Template`,
+    siteName: 'NXTDKR',
+    images: [
+      {
+        url: 'https://busylittlepixels.com/assets/images/heart.webp',
+        width: 800,
+        height: 600,
+      },
+      {
+        url: 'https://busylittlepixels.com/assets/images/heart.webp',
+        width: 1800,
+        height: 1600,
+        alt: 'NXTDKR | Base Template',
+      },
+    ],
+  },
+};
+
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 // eslint-disable-next-line unused-imports/no-unused-vars
