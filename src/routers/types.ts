@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 import type { Route as NextRouter } from 'next';
 import type { ComponentType } from 'react';
 
