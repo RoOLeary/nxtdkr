@@ -1,11 +1,10 @@
 import '../styles/globals.scss';
 
 import type { Metadata } from 'next';
-import { Inter, Poppins } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 
 import { Nav } from '../components/ui/nav';
 
-const inter = Inter({ subsets: ['latin'] });
 const poppins = Poppins({
   subsets: ['latin'],
   display: 'swap',
