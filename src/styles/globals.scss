@@ -1,3 +1,5 @@
+
+
 @tailwind base;
 @tailwind components;
 
@@ -7,10 +9,15 @@
 }
 
 @tailwind utilities;
+
+
+@layer utilities{
+  @import './theme.scss';
+}
   
 @layer base {
 
- 
+
 
   :root {
     --background: 0 0% 100%;
