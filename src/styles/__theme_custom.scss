@@ -9,9 +9,10 @@
   scrollbar-width: none; /* Firefox */
 }
 
-//
-.card-title {
-  @apply transition-colors hover:text-primary-900 dark:hover:text-primary-300 duration-75;
+@layer utilities {
+  .card-title {
+    @apply transition-colors hover:text-primary dark:hover:text-primary duration-75;
+  }
 }
 
 //

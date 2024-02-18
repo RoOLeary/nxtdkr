@@ -17,6 +17,7 @@
     "next/router.d.ts",
     "next/dist/client/router.d.ts"
   ],
+  "scss.validate": false,
   "jest.autoRun": {
     "watch": false // Start the jest with the watch flag
     // "onStartup": ["all-tests"] // Run all tests upon project launch
