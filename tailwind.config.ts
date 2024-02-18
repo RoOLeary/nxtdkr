@@ -1,3 +1,5 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
 /* eslint-disable unused-imports/no-unused-vars */
 
 import type { Config } from 'tailwindcss';
@@ -87,8 +89,20 @@ const config = {
       },
     },
   },
+  variants: {
+    extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
+    },
+  },
   // eslint-disable-next-line global-require
-  plugins: [require('tailwindcss-animate')],
+  plugins: [
+    require('tailwindcss-animate'),
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+    require('@tailwindcss/aspect-ratio'),
+  ],
 } satisfies Config;
 
 export default config;
