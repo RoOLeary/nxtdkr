@@ -10,6 +10,7 @@ export default function Page() {
         However, it has been working, and is growing on me a bit. Have to admit.
         Not totally sold yet, but not <em>not</em> either. If you get me.
       </h1>
+      <p>ASS</p>
       <br />
       <div className="flex gap-4">
         <Link href="/about">About</Link>
