@@ -384,7 +384,7 @@ nav{
   position: fixed;
   width: 100%;
   row-gap: 24px;
-  right: -100%;
+  left: -100%;
   padding: 0 32px;
   transition: all 0.2s ease-out;
   top: 0em;
@@ -404,7 +404,7 @@ nav{
     top: 2rem;
   
   }
-  right: 0;
+  left: 0;
   height: 100%;
 }
 .nav__link{
