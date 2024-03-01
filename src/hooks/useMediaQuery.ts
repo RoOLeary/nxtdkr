@@ -1,29 +1,30 @@
-import { useState, useEffect } from 'react'
+/* eslint-disable consistent-return */
+import { useEffect, useState } from 'react';
 
 export const useMediaQuery = (query: string): boolean => {
-	const [matches, setMatches] = useState(false)
+  const [matches, setMatches] = useState(false);
 
-	useEffect(() => {
-		// Ensure the hook runs safely in environments without `window`
-		if (typeof window !== 'undefined') {
-			const mediaQuery = window.matchMedia(query)
+  useEffect(() => {
+    // Ensure the hook runs safely in environments without `window`
+    if (typeof window !== 'undefined') {
+      const mediaQuery = window.matchMedia(query);
 
-			const handleMediaQueryChange = (event: MediaQueryListEvent) => {
-				setMatches(event.matches)
-			}
+      const handleMediaQueryChange = (event: MediaQueryListEvent) => {
+        setMatches(event.matches);
+      };
 
-			// Use `addEventListener` and `removeEventListener` for compatibility with modern browsers
-			mediaQuery.addEventListener('change', handleMediaQueryChange)
-			// Set the initial state based on the query
-			setMatches(mediaQuery.matches)
+      // Use `addEventListener` and `removeEventListener` for compatibility with modern browsers
+      mediaQuery.addEventListener('change', handleMediaQueryChange);
+      // Set the initial state based on the query
+      setMatches(mediaQuery.matches);
 
-			return () => {
-				mediaQuery.removeEventListener('change', handleMediaQueryChange)
-			}
-		}
-	}, [query])
+      return () => {
+        mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      };
+    }
+  }, [query]);
 
-	return matches
-}
+  return matches;
+};
 
-export default useMediaQuery
+export default useMediaQuery;

@@ -1,33 +1,34 @@
-'use client'
-import { useState, useCallback } from 'react'
+'use client';
+
+import { useCallback, useState } from 'react';
 
 interface ModalState<T> {
-	isVisible: boolean
-	data?: T
+  isVisible: boolean;
+  data?: T;
 }
 
 export const useModal = <T>() => {
-	const [modalState, setModalState] = useState<ModalState<T>>({
-		isVisible: false,
-	})
+  const [modalState, setModalState] = useState<ModalState<T>>({
+    isVisible: false,
+  });
 
-	const openModal = useCallback((data: T) => {
-		setModalState({
-			isVisible: true,
-			data,
-		})
-	}, [])
+  const openModal = useCallback((data: T) => {
+    setModalState({
+      isVisible: true,
+      data,
+    });
+  }, []);
 
-	const closeModal = useCallback(() => {
-		setModalState({
-			isVisible: false,
-		})
-	}, [])
+  const closeModal = useCallback(() => {
+    setModalState({
+      isVisible: false,
+    });
+  }, []);
 
-	return {
-		isVisible: modalState.isVisible,
-		data: modalState.data,
-		openModal,
-		closeModal,
-	}
-}
+  return {
+    isVisible: modalState.isVisible,
+    data: modalState.data,
+    openModal,
+    closeModal,
+  };
+};

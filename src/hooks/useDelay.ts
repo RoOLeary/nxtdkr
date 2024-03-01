@@ -1,18 +1,18 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState } from 'react';
 
 export const useDelay = (delayTime: unknown) => {
-	const [done, setDone] = useState(false)
-  
-	useEffect(() => {
-		const delay = setTimeout(() => {
-			setDone(true)
-	// @ts-expect-error
-    }, delayTime)
+  const [done, setDone] = useState(false);
 
-		return () => clearTimeout(delay)
-	}, [delayTime])
+  useEffect(() => {
+    const delay = setTimeout(() => {
+      setDone(true);
+      // @ts-expect-error
+    }, delayTime);
 
-	return done
-}
+    return () => clearTimeout(delay);
+  }, [delayTime]);
 
-export default useDelay
+  return done;
+};
+
+export default useDelay;

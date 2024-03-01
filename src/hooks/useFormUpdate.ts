@@ -1,51 +1,54 @@
-import React, { useState, useEffect } from 'react'
+/* eslint-disable consistent-return */
+/* eslint-disable no-param-reassign */
+import { useEffect, useState } from 'react';
 
 export const useFormUpdate = (): (() => void) => {
-	const [isFormUpdated, setIsFormUpdated] = useState(false)
+  const [isFormUpdated, setIsFormUpdated] = useState(false);
 
-	useEffect(() => {
-		const handleBeforeUnload = (event: BeforeUnloadEvent) => {
-			if (isFormUpdated) {
-				const message = 'You have unsaved changes. Are you sure you want to leave?'
-				event.returnValue = message // For legacy browsers
-				return message
-			}
-		}
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      if (isFormUpdated) {
+        const message =
+          'You have unsaved changes. Are you sure you want to leave?';
+        event.returnValue = message; // For legacy browsers
+        return message;
+      }
+    };
 
-		window.addEventListener('beforeunload', handleBeforeUnload)
+    window.addEventListener('beforeunload', handleBeforeUnload);
 
-		return () => {
-			window.removeEventListener('beforeunload', handleBeforeUnload)
-		}
-	}, [isFormUpdated])
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [isFormUpdated]);
 
-	const handleFormUpdate = () => {
-		setIsFormUpdated(true)
-	}
+  const handleFormUpdate = () => {
+    setIsFormUpdated(true);
+  };
 
-	useEffect(() => {
-		// Use a more specific type for formElements if necessary
-		const formElements = document.querySelectorAll<HTMLFormElement>(
-			'form input, form select, form textarea',
-		)
+  useEffect(() => {
+    // Use a more specific type for formElements if necessary
+    const formElements = document.querySelectorAll<HTMLFormElement>(
+      'form input, form select, form textarea',
+    );
 
-		const handleFieldChange = () => {
-			setIsFormUpdated(true)
-			//   console.log('Form Updated')
-		}
+    const handleFieldChange = () => {
+      setIsFormUpdated(true);
+      //   console.log('Form Updated')
+    };
 
-		formElements.forEach(element => {
-			element.addEventListener('change', handleFieldChange)
-		})
+    formElements.forEach((element) => {
+      element.addEventListener('change', handleFieldChange);
+    });
 
-		return () => {
-			formElements.forEach(element => {
-				element.removeEventListener('change', handleFieldChange)
-			})
-		}
-	}, [])
+    return () => {
+      formElements.forEach((element) => {
+        element.removeEventListener('change', handleFieldChange);
+      });
+    };
+  }, []);
 
-	return handleFormUpdate
-}
+  return handleFormUpdate;
+};
 
-export default useFormUpdate
+export default useFormUpdate;

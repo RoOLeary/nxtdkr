@@ -7,19 +7,6 @@ import type { Config } from 'tailwindcss';
 // eslint-disable-next-line unused-imports/no-unused-vars
 const defaultTheme = require('tailwindcss/defaultTheme');
 
-// Custom color with css variable color in __theme_color.scss
-// function customColors(cssVar) {
-//   return ({ opacityVariable, opacityValue }) => {
-//     if (opacityValue !== undefined) {
-//       return `rgba(var(${cssVar}), ${opacityValue})`;
-//     }
-//     if (opacityVariable !== undefined) {
-//       return `rgba(var(${cssVar}), var(${opacityVariable}, 1))`;
-//     }
-//     return `rgb(var(${cssVar}))`;
-//   };
-// }
-
 const config = {
   darkMode: ['class'],
   content: ['./src/**/*.{js,jsx,ts,tsx,css,scss}'],
