@@ -50,7 +50,7 @@ export default function Page() {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
-      title: 'You submitted the following values:',
+      title: 'When she heads to work...',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 z-50">
           <code className="text-white">{data.username}</code>
@@ -77,7 +77,7 @@ export default function Page() {
           <Link href="/info">Info</Link>
         </Button>
         <Button variant="outline" className="hidden md:block">
-          <Link href="/about">Yeah about that</Link>
+          <Link href="/about">Yeah about that!</Link>
         </Button>
       </div>
       <br />
@@ -91,7 +91,7 @@ export default function Page() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Username</FormLabel>
+                <FormLabel>Nyom Nyom Toast</FormLabel>
                 <FormControl>
                   <Input placeholder="shadcn" {...field} />
                 </FormControl>
