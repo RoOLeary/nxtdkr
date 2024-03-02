@@ -1,6 +1,6 @@
 'use client';
 
-import { parseISO } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 
 type DateStringProps = {
   dateString?: any;
@@ -8,9 +8,9 @@ type DateStringProps = {
 
 export const useFormatDate = ({ dateString }: DateStringProps) => {
   const date = parseISO(dateString);
-  console.log(date);
+  // console.log(date);
   //   @ts-nocheck
-  //   return format(date, 'LLLL d, yyyy');
+  return format(date, 'LLLL d, yyyy');
 };
 
 export default useFormatDate;

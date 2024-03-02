@@ -1,12 +1,12 @@
 /* eslint-disable react/no-array-index-key */
-"use client"
 
+'use client';
+
+import { zodResolver } from '@hookform/resolvers/zod';
 import Image from 'next/image';
 import Link from 'next/link';
-
-import { zodResolver } from "@hookform/resolvers/zod"
-import { useForm } from "react-hook-form"
-import { z } from "zod"
+import { useForm } from 'react-hook-form';
+import { z } from 'zod';
 
 import { Card, CardContent } from '@/components/ui/card';
 import {
@@ -16,10 +16,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel';
-
-import { Input } from "@/components/ui/input"
-import { ToastAction } from "@/components/ui/toast"
-import { useToast } from "@/components/ui/use-toast"
 import {
   Form,
   FormControl,
@@ -28,41 +24,39 @@ import {
   FormItem,
   FormLabel,
   FormMessage,
-} from "@/components/ui/form"
-
+} from '@/components/ui/form';
+import { Input } from '@/components/ui/input';
+import { useToast } from '@/components/ui/use-toast';
 
 import { Badge } from '../../components/ui/badge';
 import { Button } from '../../components/ui/button';
 import { Initial } from '../../components/ui/Initial';
 
-
 const FormSchema = z.object({
   username: z.string().min(2, {
-    message: "Username must be at least 2 characters.",
+    message: 'Username must be at least 2 characters.',
   }),
-})
+});
 
 export default function Page() {
-
   const { toast } = useToast();
 
   const form = useForm<z.infer<typeof FormSchema>>({
     resolver: zodResolver(FormSchema),
     defaultValues: {
-      username: "",
+      username: '',
     },
-  })
+  });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    
     toast({
-      title: "You submitted the following values:",
+      title: 'You submitted the following values:',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 z-50">
           <code className="text-white">{data.username}</code>
         </pre>
       ),
-    })
+    });
   }
 
   return (
@@ -89,7 +83,7 @@ export default function Page() {
       <br />
       <Badge className="p-4 bg-green-600">Nice litte badge</Badge>
       <br />
-      
+
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
           <FormField
@@ -102,7 +96,9 @@ export default function Page() {
                   <Input placeholder="shadcn" {...field} />
                 </FormControl>
                 <FormDescription>
-                {field.value ? `This is your public display name: ${field.value}` : null}
+                  {field.value
+                    ? `This is your public display name: ${field.value}`
+                    : null}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
