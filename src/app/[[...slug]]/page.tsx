@@ -94,7 +94,7 @@ export default function Page() {
           className="hidden md:block"
           onClick={() => onHandle()}
         >
-          Error
+          Error Toast
         </Button>
       </div>
       <br />
