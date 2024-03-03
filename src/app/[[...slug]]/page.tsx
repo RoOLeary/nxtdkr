@@ -1,5 +1,3 @@
-/* eslint-disable react/no-array-index-key */
-
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
@@ -151,7 +149,7 @@ export default function Page() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nyom Nyom, Delicious toasties</FormLabel>
+                <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
                 <FormControl>
                   <Input placeholder="Danger Ro" {...field} />
                 </FormControl>
@@ -170,8 +168,9 @@ export default function Page() {
       <br />
       <Carousel className="w-full max-w-full">
         <CarouselContent className="-ml-1">
-          {carouselImages.map((c, index) => (
-            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+          {carouselImages.map((c) => (
+            // eslint-disable-next-line react/no-array-index-key
+            <CarouselItem key={c.title} className="md:basis-1/2 lg:basis-1/3">
               <div className="p-1">
                 <Card>
                   <CardContent className="flex aspect-square items-center justify-center p-6">

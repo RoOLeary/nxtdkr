@@ -22,6 +22,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'media.giphy.com',
       },
+      {
+        protocol: 'http',
+        hostname: 'localhost:3000',
+      },
     ],
   },
   poweredByHeader: true,
