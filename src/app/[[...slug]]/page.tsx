@@ -3,6 +3,7 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import { ToastAction } from '@radix-ui/react-toast';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useForm } from 'react-hook-form';
@@ -59,6 +60,15 @@ export default function Page() {
     });
   }
 
+  function onHandle() {
+    toast({
+      variant: 'destructive',
+      title: 'Uh oh! Something went wrong.',
+      action: <ToastAction altText="Try again">Try again</ToastAction>,
+      description: 'You probably fucked up.',
+    });
+  }
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <Initial funny="stuff" />
@@ -78,6 +88,13 @@ export default function Page() {
         </Button>
         <Button variant="outline" className="hidden md:block">
           <Link href="/about">Yeah about that!</Link>
+        </Button>
+        <Button
+          variant="destructive"
+          className="hidden md:block"
+          onClick={() => onHandle()}
+        >
+          Error
         </Button>
       </div>
       <br />
