@@ -151,7 +151,7 @@ export default function Page() {
             name="username"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nyom Nyom Toasty Change</FormLabel>
+                <FormLabel>Nyom Nyom, Delicious toasties</FormLabel>
                 <FormControl>
                   <Input placeholder="Danger Ro" {...field} />
                 </FormControl>

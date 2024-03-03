@@ -46,7 +46,7 @@ export default async function Page() {
           return (
             <h3 key={id}>
               <Link href={`/news/${slug}`} className="hover:text-red-700">
-                {title.rendered}
+                <h5>{title.rendered}</h5>
               </Link>
             </h3>
           );

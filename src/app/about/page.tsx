@@ -10,7 +10,7 @@ export default function Page() {
         This is how lazy I am! <br />
         <br /> ABOUT YOU? ABOUT ME? ABOUT WE?
       </h3>
-      <p>Although that&apos;s not really something to be proud of. I guess.</p>
+      <p>Although that&apos;s not really something to be proud of.</p>
       <p>Anyway, number time.</p>
       <br />
       <div className="flex gap-4">
