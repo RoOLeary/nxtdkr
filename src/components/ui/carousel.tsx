@@ -158,6 +158,7 @@ const CarouselContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
+  // eslint-disable-next-line no-console
   const { carouselRef, orientation } = useCarousel();
 
   return (

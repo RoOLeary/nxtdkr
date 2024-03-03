@@ -18,6 +18,10 @@ const nextConfig = {
         protocol: 'https',
         hostname: 'ronan-oleary.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'media.giphy.com',
+      },
     ],
   },
   poweredByHeader: true,
