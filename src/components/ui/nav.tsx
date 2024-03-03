@@ -23,7 +23,7 @@ export const Nav = ({ menu }: any) => {
       <div className="mx-auto flex flex-wrap py-5 md:flex-row items-center justify-between">
         <Link href="/">
           <h1 className="text-3xl md:hover:text-4xl transition-all ease-in-out duration-150 font-black leading-tightest text-white">
-            NXT<span style={{ color: 'red' }}>DKR</span>BASE
+            D4NG3R<span style={{ color: 'red' }}>R0</span>
             <span style={{ color: 'red' }}>.</span>
           </h1>
         </Link>
