@@ -50,7 +50,7 @@ export default function Page() {
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
     toast({
-      title: 'Sumpin sumpin.',
+      title: 'Toast Output',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 z-50">
           <code className="text-white">{data.username}</code>
