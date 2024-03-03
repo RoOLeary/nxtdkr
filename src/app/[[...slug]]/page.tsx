@@ -77,9 +77,6 @@ const carouselImages = [
   },
 ];
 
-// eslint-disable-next-line no-console
-console.log(carouselImages);
-
 export default function Page() {
   const { toast } = useToast();
 
