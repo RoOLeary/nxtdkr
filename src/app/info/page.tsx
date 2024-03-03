@@ -25,23 +25,28 @@ export default async function Page() {
       </h1>
       <p>BLAH</p>
       <br />
-      <h3 className="font-black text-left">
-        Remote CPT Output from{' '}
-        <a href="https://blpwp.frb.io/wp-json/wp/v2/news" target="_blank">
-          WP
-        </a>
-      </h3>
-      <p className="font-black">Links below not clickable yet</p>
+      <div>
+        <h3 className="font-black text-left">
+          Remote CPT Output from{' '}
+          <a href="https://blpwp.frb.io/wp-json/wp/v2/news" target="_blank">
+            WP
+          </a>
+        </h3>
+
+        <p className="font-semibold">
+          Links below not clickable yet, but <i>do</i> come from a remote data
+          source
+        </p>
+      </div>
       <div className="w-full">
-        {Object.entries(infoPage).map((info: any, idx: number) => {
-          // eslint-disable-next-line react/no-array-index-key
+        {Object.entries(infoPage).map(([id, info]) => {
+          // Destructure the info array directly
+          // @ts-ignore
+          const { slug, title } = info;
           return (
-            <h3 key={idx}>
-              <Link
-                href={`/news/${info[1].slug}`}
-                className="hover:text-red-700"
-              >
-                {info[1].title.rendered}
+            <h3 key={id}>
+              <Link href={`/news/${slug}`} className="hover:text-red-700">
+                {title.rendered}
               </Link>
             </h3>
           );
