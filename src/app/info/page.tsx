@@ -35,7 +35,7 @@ export default async function Page() {
 
         <p className="font-semibold">
           Links below not clickable yet, but <i>do</i> come from a remote data
-          source
+          source.
         </p>
       </div>
       <div className="w-full">

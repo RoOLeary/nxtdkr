@@ -11,7 +11,7 @@ export default function Page() {
         <br /> ABOUT YOU? ABOUT ME? ABOUT WE?
       </h3>
       <p>Although that&apos;s not really something to be proud of.</p>
-      <p>Anyway, number time.</p>
+      <p>Anyway, number time. Again </p>
       <br />
       <div className="flex gap-4">
         <Link href="/info">Info</Link>

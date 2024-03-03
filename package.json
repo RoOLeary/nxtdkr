@@ -6,7 +6,7 @@
     "dev:next": "next dev",
     "dev": "run-p dev:*",
     "build": "next build",
-    "start": "next start",
+    "start": "node server.js",
     "build-stats": "cross-env ANALYZE=true npm run build",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint --fix",
