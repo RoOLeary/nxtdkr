@@ -3,7 +3,8 @@ export default function Loading() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       <h1 className="text-3xl font-black justify-center content-center">
-        LOADER GOES HERE!
+        LOADER GOES HERE! <br />
+        THIS IS JUST A PLACEHOLDER
       </h1>
     </main>
   );
