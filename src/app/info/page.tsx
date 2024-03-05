@@ -9,7 +9,7 @@ import { notFound } from 'next/navigation';
 export default async function Page() {
   const user = await kv.hgetall('user:ronan');
   // eslint-disable-next-line no-console
-  console.log(user?.email);
+  // console.log(user?.email);
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
     (res) => res.json(),
   );
