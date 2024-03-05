@@ -34,12 +34,12 @@ export function middleware(request: NextRequest) {
   }
   // Perform action when the cookie is not present
   // For example, redirect to a different URL
-  return NextResponse.redirect('https://studio.busylittlepixels.com');
+  // return NextResponse.redirect('https://studio.busylittlepixels.com');
   // return response;
-  // return NextResponse.json(response);
+  return NextResponse.json(response);
 }
 
 // See "Matching Paths" below to learn more
 export const config = {
-  matcher: ['/api/test'],
+  matcher: ['/api/remote/test'],
 };
