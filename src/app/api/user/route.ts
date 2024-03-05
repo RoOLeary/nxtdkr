@@ -6,7 +6,3 @@ export async function GET() {
   const user = await kv.hgetall('user:ronan');
   return NextResponse.json(user);
 }
-
-export const config = {
-  matcher: ['/api/user'],
-};
