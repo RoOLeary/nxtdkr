@@ -36,6 +36,9 @@ const FormSchema = z.object({
   username: z.string().min(2, {
     message: 'Username must be at least 2 characters.',
   }),
+  blah: z.string().min(2, {
+    message: 'Ballsack must be at least 2 characters.',
+  }),
 });
 
 const carouselImages = [
@@ -85,15 +88,20 @@ export default function Page() {
     resolver: zodResolver(FormSchema),
     defaultValues: {
       username: '',
+      blah: '',
     },
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
+    // eslint-disable-next-line no-console
+    console.log(data);
     toast({
       title: 'Toast Output',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 z-50">
-          <code className="text-white">{data.username}</code>
+          <code className="text-white">
+            {data.username} {data.blah}
+          </code>
         </pre>
       ),
     });
@@ -155,6 +163,22 @@ export default function Page() {
                   {field.value
                     ? `This is your public display name: ${field.value}`
                     : null}
+                </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+          <FormField
+            control={form.control}
+            name="blah"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
+                <FormControl>
+                  <Input placeholder="Mer berrrrls" {...field} />
+                </FormControl>
+                <FormDescription>
+                  {field.value ? `DO THIS: ${field.value}` : null}
                 </FormDescription>
                 <FormMessage />
               </FormItem>
