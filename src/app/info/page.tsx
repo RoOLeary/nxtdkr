@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export default async function Page() {
-  const user = await kv.hgetall('user:admin');
+  const user = await kv.hgetall('user:ronan');
   // eslint-disable-next-line no-console
   console.log(user?.email);
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
@@ -33,7 +33,7 @@ export default async function Page() {
       {user?.group_level && user.group_level === 'administrator' ? (
         <Link href={`mailto:${user?.email}`}>Message Admin.</Link>
       ) : (
-        <p>not an admin. off you fuck now</p>
+        <p>not an admin. away with you now</p>
       )}
       <div>
         <h3 className="font-black text-left">
