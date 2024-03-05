@@ -1,11 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-console */
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { kv } from '@vercel/kv';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 export default async function Page() {
+  const user = await kv.hgetall('user:admin');
   // eslint-disable-next-line no-console
+  console.log(user?.email);
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
     (res) => res.json(),
   );
@@ -16,6 +20,7 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
+      {/* {user && user.email : 'fuck'} */}
       <h1 className="w-full h-full font-black">
         I am an info bit. And in case I didnt already mention, I strongly
         dislike Docker, especially when it doesn&apos;t work.
@@ -25,6 +30,11 @@ export default async function Page() {
       </h1>
       <p>BLAH</p>
       <br />
+      {user?.group_level && user.group_level === 'administrator' ? (
+        <Link href={`mailto:${user?.email}`}>Message Admin.</Link>
+      ) : (
+        <p>not an admin. off you fuck now</p>
+      )}
       <div>
         <h3 className="font-black text-left">
           Remote CPT Output from{' '}
