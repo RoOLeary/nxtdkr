@@ -188,6 +188,8 @@ export default function Page() {
         </form>
       </Form>
       <br />
+      <Link href="/api/remote">API LINK</Link>
+      <br />
       <Carousel className="w-full max-w-full">
         <CarouselContent className="-ml-1">
           {carouselImages.map((c) => (
