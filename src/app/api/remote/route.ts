@@ -31,7 +31,7 @@ export function GET(request: NextRequest) {
   if (cookies) {
     // Perform action when the cookie is present
     // For example, allow the request to proceed
-    return NextResponse.redirect('http://localhost:3000/about', request.url);
+    return NextResponse.redirect('http://localhost:3000/about');
   }
   // Perform action when the cookie is not present
   // For example, redirect to a different URL
