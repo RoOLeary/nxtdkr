@@ -37,7 +37,7 @@ const FormSchema = z.object({
     message: 'Username must be at least 2 characters.',
   }),
   blah: z.string().min(2, {
-    message: 'Ballsack must be at least 2 characters.',
+    message: 'This field must be at least 2 characters.',
   }),
 });
 
@@ -96,7 +96,7 @@ export default function Page() {
     // eslint-disable-next-line no-console
     console.log(data);
     toast({
-      title: 'Toast Output',
+      title: 'Toast Output (VIM). Also in realtime',
       description: (
         <pre className="mt-2 w-[340px] rounded-md bg-slate-950 p-4 z-50">
           <code className="text-white">
@@ -146,6 +146,10 @@ export default function Page() {
       </div>
       <br />
       <Badge className="p-4 bg-green-600">Nice litte badge</Badge>
+
+      <Badge className="p-4 bg-red-600">Dangerous Red badge</Badge>
+
+      <br />
       <br />
 
       <Form {...form}>
@@ -175,7 +179,10 @@ export default function Page() {
               <FormItem>
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
                 <FormControl>
-                  <Input placeholder="Mer berrrrls" {...field} />
+                  <Input
+                    placeholder="Any aul berrrrls here is grand"
+                    {...field}
+                  />
                 </FormControl>
                 <FormDescription>
                   {field.value ? `DO THIS: ${field.value}` : null}
