@@ -147,7 +147,7 @@ export default function Page() {
       <br />
       <Badge className="p-4 bg-green-600">Nice litte badge</Badge>
 
-      <Badge className="p-4 bg-red-600">Dangerous Red badge</Badge>
+      <Badge className="mt-4 p-4 bg-red-600">Dangerous Red badge</Badge>
 
       <br />
       <br />
