@@ -131,7 +131,7 @@ export default function Page() {
       </div>
       <div className="flex gap-4 z-[10]">
         <Button variant="secondary" className="hidden md:block">
-          <Link href="/info">Info</Link>
+          <Link href="/info">Vim Test</Link>
         </Button>
         <Button variant="outline" className="hidden md:block">
           <Link href="/about">Yeah about that!</Link>
@@ -180,7 +180,7 @@ export default function Page() {
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
                 <FormControl>
                   <Input
-                    placeholder="Any aul berrrrls here is grand"
+                    placeholder="Any old placeholder will do here"
                     {...field}
                   />
                 </FormControl>

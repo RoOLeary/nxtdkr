@@ -8,8 +8,6 @@ import { notFound } from 'next/navigation';
 
 export default async function Page() {
   const user = await kv.hgetall('user:ronan');
-  // eslint-disable-next-line no-console
-  // console.log(user?.email);
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
     (res) => res.json(),
   );
@@ -50,7 +48,6 @@ export default async function Page() {
       </div>
       <div className="w-full">
         {Object.entries(infoPage).map(([id, info]) => {
-          // Destructure the info array directly
           // @ts-ignore
           const { slug, title } = info;
           return (
