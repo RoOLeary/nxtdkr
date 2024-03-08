@@ -3,8 +3,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Requirements:
 
-- Docker Desktop
-- Node
+- Docker Desktop (note: if on an M1 - you may need to specify platform in the docker-compose script)
+- Node (18++)
 
 ## Includes: 
 
@@ -18,9 +18,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 - Add shortcut directory/index/glossary
 - Add Next Auth
-- Demo forms/middleware
-- Advanced tracking (GTM plus Posthog most likely)
-
+- Demo (decent) forms/middleware
+- Advanced tracking (GTM plus Posthog?)
 
 ## Installation
 
@@ -35,7 +34,7 @@ Then, install all the stuff
 
 ```
 cd nxtdkr
-npm install --force
+npm i --f
 ```
 
 Fast build: 
