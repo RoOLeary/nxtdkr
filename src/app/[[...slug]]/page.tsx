@@ -148,7 +148,6 @@ export default function Page() {
       <Badge className="mt-4 p-4 bg-red-600">Dangerous Red badge</Badge>
 
       <br />
-      <br />
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
