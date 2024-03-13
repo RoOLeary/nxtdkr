@@ -7,11 +7,8 @@ export default function Page() {
         ABOUT WHO?
       </h1>
       <h3 className="text-3xl w-full h-full font-black text-center">
-        This is how lazy I am! <br />
-        <br /> ABOUT YOU? ABOUT ME? ABOUT WE?
+        ABOUT YOU? ABOUT ME? ABOUT WE?
       </h3>
-      <p>Although that&apos;s not really something to be proud of.</p>
-      <p>Anyway.</p>
       <br />
       <div className="flex gap-4">
         <Link href="/info">Info</Link>
