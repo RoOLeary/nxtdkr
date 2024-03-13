@@ -18,7 +18,7 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      {/* {user && user.email : 'fuck'} */}
+      {/* {user && user.email : 'ahoy'} */}
       <h1 className="w-full h-full font-black">
         I am an info bit. And in case I didnt already mention, I strongly
         dislike Docker, especially when it doesn&apos;t work.
