@@ -8,6 +8,8 @@ import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 
 import { HomeAccordion } from '@/components/custom/home-accordion';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Carousel,
@@ -27,9 +29,6 @@ import {
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import { useToast } from '@/components/ui/use-toast';
-
-import { Badge } from '../../components/ui/badge';
-import { Button } from '../../components/ui/button';
 
 const FormSchema = z.object({
   username: z.string().min(2, {
