@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 
@@ -8,7 +9,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 
-export const Nav = ({ menu }: any) => {
+export const Nav = () => {
   const isMobile = useState(false);
   const currentRoute = usePathname();
   const [navActive, setNavActive] = useState(false);
@@ -61,8 +62,36 @@ export const Nav = ({ menu }: any) => {
               }`}
               onClick={closeMobileNavOnClick}
             >
+              My Gallery
+            </Link>
+            <Link
+              href="/info"
+              className={`nav__link text-white font-black ${
+                // @ts-ignore
+                currentRoute.includes('info') ? `active info` : ''
+              }`}
+              onClick={closeMobileNavOnClick}
+            >
               Account
             </Link>
+            <div className="flex items-center">
+              <div className="wil-avatar relative flex-shrink-0 inline-flex items-center justify-center overflow-hidden text-neutral-100 uppercase font-semibold shadow-inner rounded-full w-12 h-12 ring-1 ring-white dark:ring-neutral-900">
+                <Image
+                  alt="John Doe"
+                  loading="lazy"
+                  decoding="async"
+                  data-nimg="fill"
+                  className="absolute inset-0 w-full h-full object-cover hidden md:block"
+                  sizes="100px"
+                  src="/assets/images/avatar.webp"
+                  width={75}
+                  height={75}
+                />
+              </div>
+              {/* <div className="flex-grow ms-3">
+                <h4 className="nav__link text-white font-black">Hi, Ronan</h4>
+              </div> */}
+            </div>
           </ul>
         </nav>
       </div>

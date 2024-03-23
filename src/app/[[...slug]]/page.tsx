@@ -91,15 +91,15 @@ export default function Page() {
   // }
 
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between md:p-24">
-      <div className="px-4 md:p-0 flex flex-col align-start w-full text-white">
-        <h2 className="meta">Spanish Point -&nbsp;5K</h2>{' '}
-        <p className="">Spanish Point, County Clare | 27th January 2024</p>
-      </div>
-      <section className="container mx-auto p-5 md:py-12 px-0 md:p-8 md:px-0">
+    <main className="flex min-h-screen flex-col items-center justify-between gallery">
+      <section className="container mx-auto md:py-12 px-0 md:p-8 md:px-0">
+        <div className="p-4 md:py-4 md:px-0 md:pt-2 flex flex-col align-start w-full text-white">
+          <h2 className="meta">Spanish Point -&nbsp;5K</h2>{' '}
+          <p className="">Spanish Point, County Clare | 27th January 2024</p>
+        </div>
         {/* FIRST BLOCK */}
 
-        <section className="p-5 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4 items-start ">
+        <section className="p-4 md:p-0 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-4 gap-4 items-start ">
           <section className="bg-red-500 text-center cursor-pointer rounded-sm shiney-wrapper shine">
             <img
               className="object-fit"
