@@ -1,12 +1,12 @@
 import '../styles/globals.scss';
 
 import type { Metadata } from 'next';
-import { Poppins } from 'next/font/google';
+import { Oswald } from 'next/font/google';
 
 import { Nav } from '../components/ui/nav';
 import { Toaster } from '../components/ui/toaster';
 
-const poppins = Poppins({
+const oswald = Oswald({
   subsets: ['latin'],
   display: 'swap',
   weight: ['300', '400', '500', '600', '700'],
@@ -73,9 +73,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
-        <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
+    <html lang="en" className="dark">
+      <body className={oswald.className}>
+        <div className="text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
           <Nav menu={nav} />
           {children}
         </div>
