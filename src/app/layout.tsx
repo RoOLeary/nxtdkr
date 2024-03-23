@@ -76,7 +76,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <body className={oswald.className}>
         <div className="text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
-          <Nav menu={nav} />
+          <Nav />
           {children}
         </div>
         <Toaster />
