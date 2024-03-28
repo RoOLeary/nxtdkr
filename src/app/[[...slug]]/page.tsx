@@ -126,7 +126,6 @@ export default function Page() {
           height={37}
           priority
         />
-        <p className="pb-4">LOGO HERE</p>
       </div>
       <div className="flex gap-4 z-[10]">
         <Button variant="secondary" className="hidden md:block">
