@@ -30,7 +30,7 @@ export default async function Page() {
       <p>BLAH</p>
       <br />
       {user?.group_level && user.group_level === 'administrator' ? (
-        <Link href={`mailto:${user?.email}`}>Message Admin.</Link>
+        <a href={`mailto:${user?.email}`}>Message Admin.</a>
       ) : (
         <p>not an admin. away with you now</p>
       )}
@@ -53,6 +53,7 @@ export default async function Page() {
           const { slug, title } = info;
           return (
             <h3 key={id}>
+              {/* @ts-ignore */}
               <Link href={`/news/${slug}`} className="hover:text-red-700">
                 <h5>{title.rendered}</h5>
               </Link>
@@ -63,6 +64,7 @@ export default async function Page() {
       <div className="flex gap-4">
         <Link href="/about">About</Link>
         <br />
+        {/* @ts-ignore */}
         <Link href="/">Back</Link>
       </div>
     </main>
