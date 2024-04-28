@@ -2,6 +2,8 @@ import '../styles/globals.scss';
 
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { ViewTransitions } from 'next-view-transitions';
 
 import { Nav } from '../components/ui/nav';
 import { Toaster } from '../components/ui/toaster';
@@ -73,14 +75,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={poppins.className}>
-        <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
-          <Nav menu={nav} />
-          {children}
-        </div>
-        <Toaster />
-      </body>
-    </html>
+    <ViewTransitions>
+      <html lang="en">
+        <body className={poppins.className}>
+          <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
+            <Nav menu={nav} />
+            {children}
+          </div>
+          <Toaster />
+        </body>
+      </html>
+    </ViewTransitions>
   );
 }

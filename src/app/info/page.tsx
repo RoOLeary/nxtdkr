@@ -1,10 +1,11 @@
+/* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
 /* eslint-disable no-console */
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { kv } from '@vercel/kv';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import { Link } from 'next-view-transitions';
 
 export default async function Page() {
   const user = await kv.hgetall('user:ronan');

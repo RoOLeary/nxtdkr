@@ -3,8 +3,8 @@
 
 'use client';
 
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import { Link } from 'next-view-transitions';
 import React, { useState } from 'react';
 
 export const Nav = ({ menu }: any) => {
@@ -21,6 +21,7 @@ export const Nav = ({ menu }: any) => {
   return (
     <header className="px-4 text-black body-font md:sticky w-full bg-black logoShadow">
       <div className="mx-auto flex flex-wrap py-5 md:flex-row items-center justify-between">
+        {/* @ts-ignore */}
         <Link href="/">
           <h1 className="text-3xl md:hover:text-4xl transition-all ease-in-out duration-150 font-black leading-tightest text-white">
             SG<span style={{ color: 'red' }}>NXT</span>BP
@@ -54,6 +55,7 @@ export const Nav = ({ menu }: any) => {
               // eslint-disable-next-line react/no-array-index-key
               <li id={_id} key={_id}>
                 <Link
+                  // @ts-ignore
                   href={`/${link.slug}`}
                   className={`nav__link text-white font-black ${
                     // @ts-ignore

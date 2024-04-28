@@ -3,7 +3,8 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { ToastAction } from '@radix-ui/react-toast';
 import Image from 'next/image';
-import Link from 'next/link';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Link } from 'next-view-transitions';
 import { useForm } from 'react-hook-form';
 import { z } from 'zod';
 

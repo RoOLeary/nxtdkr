@@ -1,4 +1,5 @@
-import Link from 'next/link';
+/* eslint-disable import/no-extraneous-dependencies */
+import { Link } from 'next-view-transitions';
 
 export default function Page() {
   return (
@@ -12,6 +13,7 @@ export default function Page() {
       <br />
       <div className="flex gap-4">
         <Link href="/info">Info</Link>
+        {/* @ts-ignore */}
         <Link href="/">Back</Link>
       </div>
     </main>
