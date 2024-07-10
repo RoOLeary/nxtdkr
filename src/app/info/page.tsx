@@ -17,7 +17,7 @@ export default async function Page() {
     return notFound();
   }
 
-  console.log('page info:', infoPage);
+  // console.log('page info:', infoPage);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
