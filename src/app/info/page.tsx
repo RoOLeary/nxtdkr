@@ -17,6 +17,8 @@ export default async function Page() {
     return notFound();
   }
 
+  console.log(infoPage);
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
       {/* {user && user.email : 'ahoy'} */}
@@ -50,12 +52,17 @@ export default async function Page() {
       <div className="w-full">
         {Object.entries(infoPage).map(([id, info]) => {
           // @ts-ignore
-          const { slug, title } = info;
+          const { slug, title, acf } = info;
+
+          console.log('news item', info);
+          console.log('SAGE?', acf?.sagetitle ? acf.sagetitle : 'kiss my dick');
+
           return (
             <h3 key={id}>
               {/* @ts-ignore */}
               <Link href={`/news/${slug}`} className="hover:text-red-700">
                 <h5>{title.rendered}</h5>
+                <span>{acf?.sagetitle ? acf.sagetitle : 'kiss my dick'} </span>
               </Link>
             </h3>
           );

@@ -25,7 +25,7 @@ export const Nav = ({ menu }: any) => {
         {/* @ts-ignore */}
         <Link href="/">
           <h1 className="text-3xl md:hover:text-4xl transition-all ease-in-out duration-150 font-black leading-tightest text-white">
-            SG<span style={{ color: 'red' }}>NXT</span>BP
+            NXT<span style={{ color: 'red' }}>DKR</span>
           </h1>
         </Link>
 
