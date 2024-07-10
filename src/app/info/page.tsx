@@ -3,12 +3,12 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable no-console */
 // eslint-disable-next-line import/no-extraneous-dependencies
-import { kv } from '@vercel/kv';
+// import { kv } from '@vercel/kv';
 import { notFound } from 'next/navigation';
 import { Link } from 'next-view-transitions';
 
 export default async function Page() {
-  const user = await kv.hgetall('user:ronan');
+  // const user = await kv.hgetall('user:ronan');
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
     (res) => res.json(),
   );
@@ -17,7 +17,7 @@ export default async function Page() {
     return notFound();
   }
 
-  console.log(infoPage);
+  console.log('page info:', infoPage);
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
@@ -31,11 +31,11 @@ export default async function Page() {
       </h1>
       <p>BLAH</p>
       <br />
-      {user?.group_level && user.group_level === 'administrator' ? (
+      {/* {user?.group_level && user.group_level === 'administrator' ? (
         <a href={`mailto:${user?.email}`}>Message Admin.</a>
       ) : (
         <p>not an admin. away with you now</p>
-      )}
+      )} */}
       <div>
         <h3 className="font-black text-left">
           Remote CPT Output from{' '}
