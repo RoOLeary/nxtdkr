@@ -30,6 +30,6 @@ CMD npm run start
 
 FROM base as dev
 ENV APP_ENV=dev
-RUN npm install 
+RUN npm install --force
 COPY . .
 CMD npm run dev
