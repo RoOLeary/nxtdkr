@@ -157,6 +157,7 @@ export default function Page() {
             name="username"
             render={({ field }) => (
               <FormItem>
+                {/* @ts-ignore */}
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
                 <FormControl>
                   <Input placeholder="Placeholder field" {...field} />
@@ -175,6 +176,7 @@ export default function Page() {
             name="blah"
             render={({ field }) => (
               <FormItem>
+                {/* @ts-ignore */}
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
                 <FormControl>
                   <Input
