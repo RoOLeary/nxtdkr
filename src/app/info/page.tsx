@@ -56,7 +56,10 @@ export default async function Page() {
           return (
             <h3 key={id}>
               {/* @ts-ignore */}
-              <Link href={`/info/${slug}`} className="hover:text-red-700 font-black">
+              <Link
+                href={`/info/${slug}`}
+                className="hover:text-red-700 font-black"
+              >
                 <h5>{title.rendered}</h5>
                 {acf?.sagetitle ? (
                   <span className="font-light">{acf.sagetitle}</span>
