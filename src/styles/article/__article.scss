@@ -1,13 +1,13 @@
 @layer components {
 .article{
-  @apply  min-h-screen flex flex-col items-center mt-10; 
+    @apply  min-h-screen flex flex-col items-center mt-10; 
 
-  header{
-    @apply relative flex-col mb-8 text-center
-  }
+    header{
+      @apply relative flex-col mb-8 text-center
+    }
 
-  .content{
-    @apply flex flex-col px-8 gap-2;
+    .content{
+      @apply flex flex-col px-8 gap-2;
+    }
   }
-}
 }
