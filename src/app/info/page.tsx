@@ -3,12 +3,12 @@
 /* eslint-disable array-callback-return */
 /* eslint-disable no-console */
 // eslint-disable-next-line import/no-extraneous-dependencies
-// import { kv } from '@vercel/kv';
+import { kv } from '@vercel/kv';
 import { notFound } from 'next/navigation';
 import { Link } from 'next-view-transitions';
 
 export default async function Page() {
-  // const user = await kv.hgetall('user:ronan');
+  const user = await kv.hgetall('user:ronan');
   const infoPage = await fetch(`https://blpwp.frb.io/wp-json/wp/v2/news`).then(
     (res) => res.json(),
   );
@@ -31,11 +31,11 @@ export default async function Page() {
       </h1>
       <p>BLAH</p>
       <br />
-      {/* {user?.group_level && user.group_level === 'administrator' ? (
+      {user?.group_level && user.group_level === 'administrator' ? (
         <a href={`mailto:${user?.email}`}>Message Admin.</a>
       ) : (
         <p>not an admin. away with you now</p>
-      )} */}
+      )}
       <div>
         <h3 className="font-black text-left">
           Remote CPT Output from{' '}
@@ -55,14 +55,13 @@ export default async function Page() {
           const { slug, title, acf } = info;
 
           console.log('news item', info);
-          console.log('SAGE?', acf?.sagetitle ? acf.sagetitle : 'kiss my dick');
-
+        
           return (
             <h3 key={id}>
               {/* @ts-ignore */}
               <Link href={`/news/${slug}`} className="hover:text-red-700">
                 <h5>{title.rendered}</h5>
-                <span>{acf?.sagetitle ? acf.sagetitle : 'kiss my dick'} </span>
+                {acf?.sagetitle ? <span className="font-black">{acf.sagetitle}</span> : ''}
               </Link>
             </h3>
           );
