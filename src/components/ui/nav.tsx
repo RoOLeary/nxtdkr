@@ -88,6 +88,13 @@ export const Nav = ({ menu }: any) => {
                             </span>
                         </>
                     : ''} */}
+            <Link
+              href="https://ronan-oleary.com"
+              className="nav__link text-white font-black"
+              onClick={closeMobileNavOnClick}
+            >
+              Me
+            </Link>
           </ul>
         </nav>
       </div>
