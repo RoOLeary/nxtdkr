@@ -56,7 +56,7 @@ export default async function Page() {
           return (
             <h3 key={id}>
               {/* @ts-ignore */}
-              <Link
+              <a
                 href={`/info/${slug}`}
                 className="hover:text-red-700 font-black"
               >
@@ -66,7 +66,7 @@ export default async function Page() {
                 ) : (
                   ''
                 )}
-              </Link>
+              </a>
             </h3>
           );
         })}
