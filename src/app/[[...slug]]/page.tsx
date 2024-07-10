@@ -144,8 +144,9 @@ export default function Page() {
         </Button>
       </div>
       <br />
+      {/* @ts-ignore */}
       <Badge className="p-4 bg-green-600">Nice litte badge</Badge>
-
+      {/* @ts-ignore */}
       <Badge className="mt-4 p-4 bg-red-600">Dangerous Red badge</Badge>
 
       <br />
@@ -155,7 +156,7 @@ export default function Page() {
           <FormField
             control={form.control}
             name="username"
-            render={({ field }) => (
+            render={({ field }: any) => (
               <FormItem>
                 {/* @ts-ignore */}
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
@@ -174,7 +175,7 @@ export default function Page() {
           <FormField
             control={form.control}
             name="blah"
-            render={({ field }) => (
+            render={({ field }: any) => (
               <FormItem>
                 {/* @ts-ignore */}
                 <FormLabel>Nyom Nyom, yummy toasties</FormLabel>
