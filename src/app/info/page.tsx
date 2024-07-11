@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable react/no-array-index-key */
 /* eslint-disable array-callback-return */
@@ -53,10 +54,12 @@ export default async function Page() {
         {Object.entries(infoPage).map(([id, info]) => {
           // @ts-ignore
           const { slug, title, acf } = info;
+
           return (
             <h3 key={id}>
               {/* @ts-ignore */}
               <Link
+                // @ts-ignore
                 href={`/info/${slug}`}
                 className="hover:text-red-700 font-black"
               >
