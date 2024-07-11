@@ -1,4 +1,7 @@
+/* eslint-disable react/no-danger */
 import { notFound } from 'next/navigation';
+
+import { SlidingGallery } from '@/components/custom/sliding-gallery';
 
 async function fetchData(slug: any) {
   // console.log('fetch slug:', slug);
@@ -23,11 +26,10 @@ export default async function Page({ params }: any) {
         <h1 className="text-5xl font-black pb-2">{title.rendered}</h1>
         {acf?.sagetitle ? <p>{acf.sagetitle}</p> : ''}
       </header>
-      <div
-        className="content"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: content.rendered }}
-      />
+      <SlidingGallery />
+      <div className="content">
+        <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
+      </div>
     </main>
   );
 }

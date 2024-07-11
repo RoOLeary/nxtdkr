@@ -1,0 +1,16 @@
+.slidingGallery{
+  // position: relative;
+  
+  .item{
+      opacity: 0; 
+      height: 200px;
+      width: 300px;
+      position: absolute;
+      transition: 500ms;
+  }
+
+}
+
+.slidingGallery > img:nth-child(1){
+  opacity: 1;
+}
