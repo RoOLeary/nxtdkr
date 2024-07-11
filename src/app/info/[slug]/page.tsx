@@ -26,10 +26,12 @@ export default async function Page({ params }: any) {
         <h1 className="text-5xl font-black pb-2">{title.rendered}</h1>
         {acf?.sagetitle ? <p>{acf.sagetitle}</p> : ''}
       </header>
-      <SlidingGallery />
+
       <div className="content">
         <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </div>
+
+      <SlidingGallery />
     </main>
   );
 }
