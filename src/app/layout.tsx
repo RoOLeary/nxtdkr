@@ -79,7 +79,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppins.className}>
           <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
-            <Nav menu={nav} />
+            {/* <Nav menu={nav} /> */}
             {children}
           </div>
           <Toaster />

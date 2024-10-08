@@ -8,7 +8,7 @@ import { usePathname } from 'next/navigation';
 import { Link } from 'next-view-transitions';
 import React, { useState } from 'react';
 
-export const Nav = ({ menu }: any) => {
+export const Nav = () => {
   const isMobile = useState(false);
   const currentRoute = usePathname();
   const [navActive, setNavActive] = useState(false);
