@@ -42,7 +42,8 @@ export const Nav = ({ menu }: any) => {
           </div>
           <ul className={`nav__menu-list px-4 ${navActive ? 'active' : ''}`}>
             <Link
-              href="/info"
+              // @ts-ignore
+              href="/tasks"
               className={`nav__link text-white font-black ${
                 // @ts-ignore
                 currentRoute.includes('info') ? `active info` : ''
@@ -51,7 +52,7 @@ export const Nav = ({ menu }: any) => {
             >
               INFO
             </Link>
-            {menu.map((link: any, _id: number) => (
+            {/* {menu.map((link: any, _id: number) => (
               // @ts-ignore
               // eslint-disable-next-line react/no-array-index-key
               <li id={_id} key={_id}>
@@ -69,7 +70,7 @@ export const Nav = ({ menu }: any) => {
                   {link.title}
                 </Link>
               </li>
-            ))}
+            ))} */}
             {/* {isMobile ? 
                         <>
                             <hr className={`border-b border-white border-opacity-25`} />
