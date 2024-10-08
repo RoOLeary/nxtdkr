@@ -30,9 +30,7 @@ export const HomeAccordion = ({ type }: any) => {
       </AccordionItem>
       <AccordionItem value="item-4">
         <AccordionTrigger>Is it cool?</AccordionTrigger>
-        <AccordionContent>
-          Yes. It is very cool. No smoke up and hit the shower.
-        </AccordionContent>
+        <AccordionContent>Yes. It is very cool.</AccordionContent>
       </AccordionItem>
     </Accordion>
   );
