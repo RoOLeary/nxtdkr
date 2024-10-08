@@ -209,10 +209,13 @@ export default function ClientTaskManager({ initialTasks }: any) {
   }
 
   return (
-    <div className="min-w-max md:min-w-[760px]">
-      <h1 className="min-w-max md:min-w-[760px] text-3xl h-full font-black text-left">
-        Simple Task Manager (NextJS version - App Router)
+    <div className="w-full md:max-w-[760px]">
+      <h1 className="text-3xl h-full font-black text-left">
+        Simple Task Manager
       </h1>
+      <h2 className="text-xl h-full font-black text-left">
+        NextJS version - App Router
+      </h2>
       <InstructionsContainer>
         <InstructionsText>
           Hi, {userName}. Use the interface below to Add, Edit, Update and
