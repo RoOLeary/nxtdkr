@@ -210,9 +210,12 @@ export default function ClientTaskManager({ initialTasks }: any) {
 
   return (
     <div className="min-w-max md:min-w-[760px]">
+      <h1 className="min-w-max md:min-w-[760px] text-3xl h-full font-black text-left">
+        Simple Task Manager (NextJS version - App Router)
+      </h1>
       <InstructionsContainer>
         <InstructionsText>
-          User the interface below to Add, Edit, Update and Delete Tasks. <br />
+          Hi, {userName}. Use the interface below to Add, Edit, Update and Delete Tasks. <br />
           When adding a task, you will automatically be shown as the task
           creator. <br />
           Tasks can be filtered by All, My Tasks, Completed, and Incomplete.

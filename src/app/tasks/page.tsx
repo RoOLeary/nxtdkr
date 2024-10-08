@@ -19,9 +19,6 @@ export default async function Page() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24 max-sm:p-8">
-      <h1 className="min-w-max md:min-w-[760px] text-3xl h-full font-black text-left">
-        Simple Task Manager
-      </h1>
       <ClientTaskManager initialTasks={tasks} />
     </main>
   );
