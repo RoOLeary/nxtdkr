@@ -215,7 +215,8 @@ export default function ClientTaskManager({ initialTasks }: any) {
       </h1>
       <InstructionsContainer>
         <InstructionsText>
-          Hi, {userName}. Use the interface below to Add, Edit, Update and Delete Tasks. <br />
+          Hi, {userName}. Use the interface below to Add, Edit, Update and
+          Delete Tasks. <br />
           When adding a task, you will automatically be shown as the task
           creator. <br />
           Tasks can be filtered by All, My Tasks, Completed, and Incomplete.
