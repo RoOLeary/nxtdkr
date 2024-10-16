@@ -1,4 +1,3 @@
-// pages/move/Page.tsx
 import { notFound } from 'next/navigation';
 
 import ClientTaskManager from '../../components/move/ClientTaskManager';
