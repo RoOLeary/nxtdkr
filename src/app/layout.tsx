@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { ViewTransitions } from 'next-view-transitions';
 
-// import { Nav } from '../components/ui/nav';
+import { Nav } from '../components/ui/nav';
 import { Toaster } from '../components/ui/toaster';
 
 const poppins = Poppins({
@@ -79,7 +79,7 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppins.className}>
           <div className="bg-[#f8f8f8] text-base dark:bg-neutral-900/95 text-neutral-900 dark:text-neutral-200">
-            {/* <Nav menu={nav} /> */}
+            <Nav menu={nav} />
             {children}
           </div>
           <Toaster />
