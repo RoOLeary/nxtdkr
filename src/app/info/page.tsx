@@ -62,7 +62,7 @@ export default async function Page() {
                 // @ts-ignore
                 href={`/info/${slug}`}
                 className="hover:text-red-700 font-black"
-                prefetch={false}
+                prefetch
               >
                 <h5>{title.rendered}</h5>
                 {acf?.sagetitle ? (
