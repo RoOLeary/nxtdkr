@@ -1,8 +1,6 @@
 /* eslint-disable react/no-danger */
 import { notFound } from 'next/navigation';
 
-import { SlidingGallery } from '@/components/custom/sliding-gallery';
-
 async function fetchData(slug: any) {
   // console.log('fetch slug:', slug);
   const page = await fetch(
@@ -30,8 +28,6 @@ export default async function Page({ params }: any) {
       <div className="content">
         <div dangerouslySetInnerHTML={{ __html: content.rendered }} />
       </div>
-
-      <SlidingGallery />
     </main>
   );
 }
