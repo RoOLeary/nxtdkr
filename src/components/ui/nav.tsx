@@ -57,13 +57,20 @@ export const Nav = () => {
           </div>
           <ul className={`nav__menu-list px-4 ${navActive ? 'active' : ''}`}>
             <Link
-              href="/tasks"
+              href="/info"
               className={`nav__link text-white font-black ${
                 currentRoute.includes('info') ? `active info` : ''
               }`}
               onClick={closeMobileNavOnClick}
             >
               INFO
+            </Link>
+            <Link
+              href="/about-us"
+              className="nav__link text-white font-black"
+              onClick={closeMobileNavOnClick}
+            >
+              About
             </Link>
             <Link
               href="https://ronan-oleary.com"
